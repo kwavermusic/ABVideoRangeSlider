@@ -9,7 +9,7 @@
 import UIKit
 
 class ABBorder: UIView {
-
+    
     var imageView = UIImageView()
     
     override init(frame: CGRect) {
@@ -18,9 +18,10 @@ class ABBorder: UIView {
         let bundle = Bundle(for: ABStartIndicator.self)
         let image = UIImage(named: "BorderLine", in: bundle, compatibleWith: nil)
         
-        imageView.frame = self.bounds
-        imageView.image = image
+        imageView.frame = CGRect(x:-2,y:1, width:self.bounds.size.width + 4,height:3)
         imageView.contentMode = UIViewContentMode.scaleToFill
+        imageView.layer.cornerRadius = 1.5
+        imageView.clipsToBounds = true
         self.addSubview(imageView)
     }
     
@@ -30,7 +31,7 @@ class ABBorder: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        imageView.frame = self.bounds
+        imageView.frame = CGRect(x:-2,y:1, width:self.bounds.size.width + 4,height:3)
     }
-
+    
 }
