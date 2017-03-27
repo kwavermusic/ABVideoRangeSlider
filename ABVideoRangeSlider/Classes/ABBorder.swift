@@ -18,9 +18,9 @@ class ABBorder: UIView {
         let bundle = Bundle(for: ABStartIndicator.self)
         let image = UIImage(named: "BorderLine", in: bundle, compatibleWith: nil)
         
-        imageView.frame = CGRect(x:-2,y:1, width:self.bounds.size.width + 4,height:3)
+        imageView.frame = CGRect(x:-2,y:1, width:self.bounds.size.width + 4,height:4)
         imageView.contentMode = UIViewContentMode.scaleToFill
-        imageView.layer.cornerRadius = 1.5
+        imageView.layer.cornerRadius = 2
         imageView.clipsToBounds = true
         self.addSubview(imageView)
     }

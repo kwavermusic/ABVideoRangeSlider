@@ -18,10 +18,10 @@ class ABStartIndicator: UIView {
         
         let bundle = Bundle(for: ABStartIndicator.self)
         let image = UIImage(named: "StartIndicator", in: bundle, compatibleWith: nil)
-        imageView.frame = CGRect(x:17,y:2,width:3,height:46)
+        imageView.frame = CGRect(x:17,y:2,width:4,height:46)
         imageView.image = image
         imageView.contentMode = UIViewContentMode.scaleToFill
-        imageView.layer.cornerRadius = 1.5
+        imageView.layer.cornerRadius = 2
         imageView.clipsToBounds = true
         self.addSubview(imageView)
         
